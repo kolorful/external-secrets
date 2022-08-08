@@ -518,6 +518,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../guides-decoding-strategy/" class="md-nav__link">
+        Decoding Strategies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../guides-getallsecrets/" class="md-nav__link">
         Getting Multiple Secrets
       </a>
@@ -548,6 +562,20 @@
     <li class="md-nav__item">
       <a href="../guides-metrics/" class="md-nav__link">
         Metrics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides-datafrom-rewrite/" class="md-nav__link">
+        Rewriting Keys
       </a>
     </li>
   
@@ -1000,6 +1028,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../provider-yandex-certificate-manager/" class="md-nav__link">
+        Certificate Manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../provider-yandex-lockbox/" class="md-nav__link">
         Lockbox
       </a>
@@ -1114,6 +1156,53 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_10" type="checkbox" id="__nav_5_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_10">
+          1Password
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1Password" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_10">
+          <span class="md-nav__icon md-icon"></span>
+          1Password
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../provider-1password-automation/" class="md-nav__link">
+        Secrets Automation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../provider-webhook/" class="md-nav__link">
         Webhook
@@ -1146,6 +1235,53 @@
       <a href="../provider-kubernetes/" class="md-nav__link">
         Kubernetes
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_14" type="checkbox" id="__nav_5_14" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_14">
+          senhasegura
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="senhasegura" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_14">
+          <span class="md-nav__icon md-icon"></span>
+          senhasegura
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../provider-senhasegura-dsm/" class="md-nav__link">
+        DevOps Secrets Management (DSM)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1455,6 +1591,51 @@
   
   
     <li class="md-nav__item">
+      <a href="../roadmap/" class="md-nav__link">
+        Roadmap
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stability-support/" class="md-nav__link">
+        Stability and Support
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../deprecation-policy/" class="md-nav__link">
         Deprecation Policy
       </a>
@@ -1586,7 +1767,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/external-secrets/external-secrets/edit/master/docs/provider-azure-key-vault.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/external-secrets/external-secrets/edit/main/docs/provider-azure-key-vault.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
@@ -1599,6 +1780,10 @@
 <h3 id="authentication">Authentication</h3>
 <p>We support Service Principals, Managed Identity and Workload Identity authentication.</p>
 <p>To use Managed Identity authentication, you should use <a href="https://azure.github.io/aad-pod-identity/docs/">aad-pod-identity</a> to assign the identity to external-secrets operator. To add the selector to external-secrets operator, use <code>podLabels</code> in your values.yaml in case of Helm installation of external-secrets.</p>
+<p>Minimum required permissions are <code>Get</code> over secret and certificate permissions. This can be done by adding a Key Vault access policy:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">KUBELET_IDENTITY_OBJECT_ID</span><span class="o">=</span><span class="k">$(</span>az aks show --resource-group &lt;AKS_CLUSTER_RG_NAME&gt; --name &lt;AKS_CLUSTER_NAME&gt; --query <span class="s1">&#39;identityProfile.kubeletidentity.objectId&#39;</span> -o tsv<span class="k">)</span>
+az keyvault set-policy --name kv-name-with-certs --object-id <span class="s2">&quot;</span><span class="nv">$KUBELET_IDENTITY_OBJECT_ID</span><span class="s2">&quot;</span> --certificate-permissions get --secret-permissions get
+</code></pre></div>
 <h4 id="service-principal-key-authentication">Service Principal key authentication</h4>
 <p>A service Principal client and Secret is created and the JSON keyfile is stored in a <code>Kind=Secret</code>. The <code>ClientID</code> and <code>ClientSecret</code> should be configured for the secret. This service principal should have proper access rights to the keyvault to be managed by the operator</p>
 <h4 id="managed-identity-authentication">Managed Identity authentication</h4>
@@ -1743,8 +1928,7 @@
 </table>
 <h3 id="creating-external-secret">Creating external secret</h3>
 <p>To create a kubernetes secret from the Azure Key vault secret a <code>Kind=ExternalSecret</code> is needed.</p>
-<p>You can manage keys/secrets/certificates saved inside the keyvault , by setting a "/" prefixed type in the secret name , the default type is a <code>secret</code>. other supported values are <code>cert</code> and <code>key</code></p>
-<p>to select all secrets inside the key vault , you can use the <code>dataFrom</code> directive</p>
+<p>You can manage keys/secrets/certificates saved inside the keyvault , by setting a "/" prefixed type in the secret name, the default type is a <code>secret</code>. Other supported values are <code>cert</code> and <code>key</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span><span class="w"></span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ExternalSecret</span><span class="w"></span>
 <span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
@@ -1770,6 +1954,19 @@
 <span class="w">    </span><span class="nt">remoteRef</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secret/dev-secret-test</span><span class="w"></span>
 
+<span class="w">  </span><span class="c1"># metadataPolicy to fetch all the tags in JSON format</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dev-secret-test</span><span class="w"></span>
+<span class="w">    </span><span class="nt">remoteRef</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dev-secret-test</span><span class="w"></span>
+<span class="w">      </span><span class="nt">metadataPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Fetch</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1"># metadataPolicy to fetch a specific tag which name must be in property</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dev-secret-test</span><span class="w"></span>
+<span class="w">    </span><span class="nt">remoteRef</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dev-secret-test</span><span class="w"></span>
+<span class="w">      </span><span class="nt">metadataPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Fetch</span><span class="w"></span>
+<span class="w">      </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tagname</span><span class="w"></span>
+
 <span class="w">  </span><span class="c1"># type/name of certificate in the Azure KV</span><span class="w"></span>
 <span class="w">  </span><span class="c1"># raw value will be returned, use templating features for data processing</span><span class="w"></span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dev-cert-test</span><span class="w"></span>
@@ -1782,9 +1979,61 @@
 <span class="w">    </span><span class="nt">remoteRef</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">key/dev-key-test</span><span class="w"></span>
 </code></pre></div>
-<p>The operator will fetch the Azure Key vault secret and inject it as a <code>Kind=Secret</code>
-<div class="highlight"><pre><span></span><code>kubectl get secret secret-to-be-created -n &lt;namespace&gt; | -o jsonpath=&#39;{.data.dev-secret-test}&#39; | base64 -d
-</code></pre></div></p>
+<p>The operator will fetch the Azure Key vault secret and inject it as a <code>Kind=Secret</code>. Then the Kubernetes secret can be fetched by issuing:</p>
+<div class="highlight"><pre><span></span><code>kubectl get secret secret-to-be-created -n &lt;namespace&gt; <span class="p">|</span> -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.dev-secret-test}&#39;</span> <span class="p">|</span> base64 -d
+</code></pre></div>
+<p>To select all secrets inside the key vault or all tags inside a secret, you can use the <code>dataFrom</code> directive:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ExternalSecret</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">refreshInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span><span class="w">           </span><span class="c1"># rate SecretManager pulls Azure Key Vault</span><span class="w"></span>
+<span class="w">  </span><span class="nt">secretStoreRef</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span><span class="w">               </span><span class="c1"># name of the SecretStore (or kind specified)</span><span class="w"></span>
+<span class="w">  </span><span class="nt">target</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secret-to-be-created</span><span class="w">  </span><span class="c1"># name of the k8s Secret to be created</span><span class="w"></span>
+<span class="w">    </span><span class="nt">creationPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Owner</span><span class="w"></span>
+<span class="w">  </span><span class="nt">dataFrom</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">find</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">regexp</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;^example&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">find</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">tags</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">seb</span><span class="w"></span>
+<span class="w">        </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dev</span><span class="w"></span>
+<span class="w">  </span><span class="c1"># secret value is in JSON format and we unmarshall it into multiple key/values in k8s secret</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">extract</span><span class="p">:</span><span class="w"> </span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span><span class="w"></span>
+<span class="w">  </span><span class="c1"># get all tags and the tags in JSON format will be unmarshall </span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">extract</span><span class="p">:</span><span class="w"> </span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span><span class="w"></span>
+<span class="w">      </span><span class="nt">metadataPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Fetch</span><span class="w"></span>
+</code></pre></div>
+<p>To get a PKCS#12 certificate from Azure Key Vault and inject it as a <code>Kind=Secret</code> of type <code>kubernetes.io/tls</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ExternalSecret</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mycert</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">refreshInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">24h</span><span class="w"></span>
+<span class="w">  </span><span class="nt">secretStoreRef</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterSecretStore</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kv-mycert</span><span class="w"></span>
+<span class="w">  </span><span class="nt">target</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">template</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubernetes.io/tls</span><span class="w"></span>
+<span class="w">      </span><span class="nt">engineVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v2</span><span class="w"></span>
+<span class="w">      </span><span class="nt">data</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">tls.crt</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">.mycert</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">b64dec</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">pkcs12cert</span><span class="nv"> </span><span class="s">}}&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="nt">tls.key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">.mycert</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">b64dec</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">pkcs12key</span><span class="nv"> </span><span class="s">}}&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">data</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mycert</span><span class="w"></span>
+<span class="w">    </span><span class="nt">remoteRef</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="c1"># Azure Key Vault certificates must be fetched as secret/cert-name</span><span class="w"></span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secret/mycert</span><span class="w"></span>
+</code></pre></div>
 
               
             </article>
@@ -1833,6 +2082,14 @@
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2022 The external-secrets Authors.<br/>
+&copy; 2022 The Linux Foundation. All rights reserved.<br/><br/>
+The Linux Foundation has registered trademarks and uses trademarks.<br/>
+For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage/">Trademark Usage page</a>.
+
+    </div>
   
   
     Made with

@@ -624,6 +624,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../guides-decoding-strategy/" class="md-nav__link">
+        Decoding Strategies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../guides-getallsecrets/" class="md-nav__link">
         Getting Multiple Secrets
       </a>
@@ -654,6 +668,20 @@
     <li class="md-nav__item">
       <a href="../guides-metrics/" class="md-nav__link">
         Metrics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides-datafrom-rewrite/" class="md-nav__link">
+        Rewriting Keys
       </a>
     </li>
   
@@ -984,6 +1012,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../provider-yandex-certificate-manager/" class="md-nav__link">
+        Certificate Manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../provider-yandex-lockbox/" class="md-nav__link">
         Lockbox
       </a>
@@ -1098,6 +1140,53 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_10" type="checkbox" id="__nav_5_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_10">
+          1Password
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1Password" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_10">
+          <span class="md-nav__icon md-icon"></span>
+          1Password
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../provider-1password-automation/" class="md-nav__link">
+        Secrets Automation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../provider-webhook/" class="md-nav__link">
         Webhook
@@ -1130,6 +1219,53 @@
       <a href="../provider-kubernetes/" class="md-nav__link">
         Kubernetes
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_14" type="checkbox" id="__nav_5_14" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_14">
+          senhasegura
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="senhasegura" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_14">
+          <span class="md-nav__icon md-icon"></span>
+          senhasegura
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../provider-senhasegura-dsm/" class="md-nav__link">
+        DevOps Secrets Management (DSM)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1439,6 +1575,51 @@
   
   
     <li class="md-nav__item">
+      <a href="../roadmap/" class="md-nav__link">
+        Roadmap
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stability-support/" class="md-nav__link">
+        Stability and Support
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../deprecation-policy/" class="md-nav__link">
         Deprecation Policy
       </a>
@@ -1552,7 +1733,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/external-secrets/external-secrets/edit/master/docs/guides-templating.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/external-secrets/external-secrets/edit/main/docs/guides-templating.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
@@ -1583,6 +1764,8 @@
 <span class="w">            </span><span class="no">url: http://localhost:8080</span><span class="w"></span>
 <span class="w">            </span><span class="no">password: &quot;{{ .password }}&quot;</span><span class="w"></span>
 <span class="w">            </span><span class="no">user: &quot;{{ .user }}&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="c1"># using replace function to rewrite secret</span><span class="w"></span>
+<span class="w">        </span><span class="nt">connection</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">.dburl</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">replace</span><span class="nv"> </span><span class="s">&quot;postgres://&quot;</span><span class="nv"> </span><span class="s">&quot;postgresql://&quot;</span><span class="nv"> </span><span class="s">}}&#39;</span><span class="w"></span>
 
 <span class="w">  </span><span class="nt">data</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span><span class="w"></span>
@@ -1591,6 +1774,9 @@
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span><span class="w"></span>
 <span class="w">    </span><span class="nt">remoteRef</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/grafana/password</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dburl</span><span class="w"></span>
+<span class="w">    </span><span class="nt">remoteRef</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/database/url</span><span class="w"></span>
 </code></pre></div>
 <h3 id="templatefrom">TemplateFrom</h3>
 <p>You do not have to define your templates inline in an ExternalSecret but you can pull <code>ConfigMaps</code> or other Secrets that contain a template. Consider the following example:</p>
@@ -1740,10 +1926,24 @@ NtFUGA95RGN9s+pl6XY0YARPHf5O76ErC1OZtDTR5RdyQfcM+94gYZsexsXl0aQO
 <td>filterPEM</td>
 <td>Filters PEM blocks with a specific type from a list of PEM blocks.</td>
 </tr>
+<tr>
+<td>jwkPublicKeyPem</td>
+<td>Takes an json-serialized JWK and returns an PEM block of type <code>PUBLIC KEY</code> that contains the public key. <a href="https://golang.org/pkg/crypto/x509/#MarshalPKIXPublicKey">See here</a> for details.</td>
+</tr>
+<tr>
+<td>jwkPrivateKeyPem</td>
+<td>Takes an json-serialized JWK as <code>string</code> and returns an PEM block of type <code>PRIVATE KEY</code> that contains the private key in PKCS #8 format. <a href="https://golang.org/pkg/crypto/x509/#MarshalPKCS8PrivateKey">See here</a> for details.</td>
+</tr>
+<tr>
+<td>toYaml</td>
+<td>Takes an interface, marshals it to yaml. It returns a string, even on marshal error (empty string).</td>
+</tr>
+<tr>
+<td>fromYaml</td>
+<td>Function converts a YAML document into a map[string]interface{}.</td>
+</tr>
 </tbody>
 </table>
-<p>| jwkPublicKeyPem | Takes an json-serialized JWK and returns an PEM block of type <code>PUBLIC KEY</code> that contains the public key. <a href="https://golang.org/pkg/crypto/x509/#MarshalPKIXPublicKey">See here</a> for details. |
-| jwkPrivateKeyPem | Takes an json-serialized JWK as <code>string</code> and returns an PEM block of type <code>PRIVATE KEY</code> that contains the private key in PKCS #8 format. <a href="https://golang.org/pkg/crypto/x509/#MarshalPKCS8PrivateKey">See here</a> for details. |</p>
 <h2 id="migrating-from-v1">Migrating from v1</h2>
 <p>If you are still using <code>v1alpha1</code>, You have to opt-in to use the new engine version by specifying <code>template.engineVersion=v2</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1alpha1</span><span class="w"></span>
@@ -1830,6 +2030,14 @@ NtFUGA95RGN9s+pl6XY0YARPHf5O76ErC1OZtDTR5RdyQfcM+94gYZsexsXl0aQO
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2022 The external-secrets Authors.<br/>
+&copy; 2022 The Linux Foundation. All rights reserved.<br/><br/>
+The Linux Foundation has registered trademarks and uses trademarks.<br/>
+For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage/">Trademark Usage page</a>.
+
+    </div>
   
   
     Made with
